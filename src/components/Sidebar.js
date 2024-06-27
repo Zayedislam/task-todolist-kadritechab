@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Switch } from "@headlessui/react";
 import boardIcon from "../assets/icon-board.svg";
-import useDarkMode from "../hooks/useDarkMode";
 import darkIcon from "../assets/icon-dark-theme.svg";
 import lightIcon from "../assets/icon-light-theme.svg";
 
@@ -15,14 +14,9 @@ import AddEditBoardModal from "../modals/AddEditBoardModal";
 function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
   const dispatch = useDispatch();
   const [isBoardModalOpen, setIsBoardModalOpen] = useState(false);
-  const [colorTheme, setTheme] = useDarkMode();
-  const [darkSide, setDarkSide] = useState(colorTheme === "light" ? true : false);
-
-  const toggleDarkMode = (checked) => {
-    setTheme(colorTheme);
-    setDarkSide(checked);
-  };
-
+ 
+ 
+ 
   const boards = useSelector((state) => state.boards);
 
   const toggleSidebar = () => {
