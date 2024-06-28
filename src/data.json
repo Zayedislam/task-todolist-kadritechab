@@ -1,7 +1,7 @@
 {
   "boards": [
     {
-      "name": "Workforce App",
+      "name": "Kadritech AB",
       "isActive" : false,
       "columns": [
         {
@@ -11,6 +11,8 @@
               "title": "Work UI Create",
               "description": "",
               "status": "Todo",
+              
+              "people_assign":4,
               "subtasks": [
                 {
                   "title": "Sign up ",
@@ -30,6 +32,7 @@
               "title": "UI for search",
               "description": "",
               "status": "Todo",
+              "people_assign":5,
               "subtasks": [
                 {
                   "title": " page",
@@ -41,6 +44,8 @@
               "title": "Build settings UI",
               "description": "",
               "status": "Todo",
+              
+              "people_assign":1,
               "subtasks": [
                 {
                   "title": "Account page",
@@ -62,6 +67,8 @@
               "title": "Design settings and search pages",
               "description": "",
               "status": "Doing",
+              
+              "people_assign":1,
               "subtasks": [
                 {
                   "title": "Settings - Account page",
@@ -74,6 +81,8 @@
               "title": "Add authentication endpoints",
               "description": "",
               "status": "Doing",
+              
+              "people_assign":3,
               "subtasks": [
                 {
                   "title": "Define user model",
@@ -91,9 +100,10 @@
           "name": "Done",
           "tasks": [
             {
-              "title": "Conduct 5 wireframe tests",
+              "title": "Create todo List",
               "description": "Ensure the layout continues to make sense and we have strong buy-in from potential users.",
               "status": "Done",
+              "people_assign":3,
               "subtasks": [
                 {
                   "title": "Complete 5 wireframe prototype tests",
@@ -105,6 +115,7 @@
               "title": "Create wireframe prototype",
               "description": "Create a greyscale clickable wireframe prototype to test our asssumptions so far.",
               "status": "Done",
+              "people_assign":3,
               "subtasks": [
                 {
                   "title": "Create clickable wireframe prototype in Balsamiq",
