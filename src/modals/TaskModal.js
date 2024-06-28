@@ -88,6 +88,7 @@ function TaskModal({ taskIndex, colIndex, setIsTaskModalOpen }) {
             alt="elipsis"
             className=" cursor-pointer h-6"
           />
+          
           {isElipsisMenuOpen && (
             <ElipsisMenu
               setOpenEditModal={setOpenEditModal}
@@ -96,6 +97,8 @@ function TaskModal({ taskIndex, colIndex, setIsTaskModalOpen }) {
             />
           )}
         </div>
+        {/* <h4 className=" text-lg">{task.description}</h4> */}
+
         <p className=" text-gray-500 font-[600] tracking-wide text-xs pt-6">
           {task.description}
         </p>
@@ -143,6 +146,8 @@ function TaskModal({ taskIndex, colIndex, setIsTaskModalOpen }) {
           onDeleteBtnClick={onDeleteBtnClick}
           type="task"
           title={task.title}
+          setIsDeleteModalOpen={setIsDeleteModalOpen}
+
         />
       )}
 

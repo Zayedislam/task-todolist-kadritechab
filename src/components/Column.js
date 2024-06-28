@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import boardsSlice from "../redux/boardsSlice";
 import Task from "./Task";
 import AddEditTaskModal from "../modals/AddEditTaskModal";
+import boardIcon from "../assets/icon-board.svg";
 
 function Column({ colIndex }) {
   const colors = [
@@ -17,6 +18,19 @@ function Column({ colIndex }) {
     "bg-pink-500",
     "bg-sky-500",
   ];
+
+  const getColor = (colName) => {
+    switch (colName) {
+      case "New":
+        return "bg-blue-500";
+      case "Ongoing":
+        return "bg-orange-500";
+      case "Done":
+        return "bg-green-500";
+      default:
+        return "bg-gray-500";
+    }
+  };
 
   const dispatch = useDispatch();
   const [color, setColor] = useState(null);
@@ -50,7 +64,7 @@ function Column({ colIndex }) {
         style={{ backgroundColor: "#EEEDEB", borderRadius: "20px" }}
       >
         <p className=' font-semibold flex  items-center  gap-2 tracking-widest md:tracking-[.2em] text-[#828fa3]'>
-          <div className={`rounded-full w-4 h-4 ${color} `} />
+          <div className={`rounded-full w-4 h-4 ${getColor(col.name)}`} />
           {col.name} ({col.tasks.length})
         </p>
 
@@ -62,9 +76,10 @@ function Column({ colIndex }) {
           onClick={() => {
             setIsTaskModalOpen((prevState) => !prevState);
           }}
-          className='class="flex items-center p-2 bg-white border rounded shadow hover:bg-gray-100 cursor-pointer"'
+          className='flex text-gray-500 items-center p-2 bg-white border rounded shadow hover:bg-gray-100 cursor-pointer'
         >
           +Add New Task
+          <img src={boardIcon} className='filter-white h-4 ml-auto' />
         </div>
       </div>
 
